@@ -1,23 +1,34 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Taskbox(ele) {
+
+    const navigate = useNavigate();
 
 
     const changeStatus = (status) =>{
         if(status){
-            
+            //Api Request
         }
         else{
-            
+
         }
     }
+
+    const deleteData = () =>{
+        //Api request
+    }
+
+
   return (
     <div>
-        <h1>{ele.name}</h1>
-        <p>{ele.note}</p>
-        <button onClick={(()=>{changeStatus(ele.status)})}>{
+        <h1>{ele.name}Green mentor assisnment</h1>
+        <p>{ele.note}Todo application</p>
+        <h4 onClick={(()=>{changeStatus(ele.status)})}>Status:-{
             ele.status ? "Completed" : "Not Completed"     
-        }</button>
+        }</h4>
+        <button onClick={(()=>{navigate(`/edit/:${ele.id}`)})}>Edit</button>
+        <button onClick={(()=>deleteData(ele.id))}>Delete</button>
     </div>
   )
 }

@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+
+  const navigate = useNavigate();
+
     const [login,setLogin] = useState(false);
 
     const loginfnc = () =>{
@@ -17,8 +21,8 @@ export default function Navbar() {
             Task Manager
         </div>
         <div>
-            <div>Home</div>
-            <div>Add Task</div>
+            <div onClick={(()=>{navigate("/")})}>Home</div>
+            <div onClick={(()=>{navigate("/add")})}>Add Task</div>
         </div>
          <div>
             <button onClick={loginfnc}>{
