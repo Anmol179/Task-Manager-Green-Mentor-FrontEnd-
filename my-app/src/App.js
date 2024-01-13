@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 import Navbar from './Components/Navbar';
 import Allroutes from './Routes/Allroutes';
+import { useState } from 'react';
+import Signin from './Pages/Signin';
 
 function App() {
+
+  const [login,setLogin] = useState(false);
+
+
   return (
     <div className="App">
-      <Navbar />
-      <Allroutes />
+      {
+        login ?  <div>
+        <Navbar login={login}/><Allroutes />
+      </div> :<Signin login={login} setLogin={setLogin}/>
+      }
     </div>
   );
 }

@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <div>
         {
-            load ? "Loading" : <Taskbox />
+            load ? "Loading" : data?.map((ele,ind)=>
+            <Taskbox ele={ele} key={ele.id}/>
+            )
         }
     </div>
   )

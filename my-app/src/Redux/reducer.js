@@ -1,7 +1,16 @@
 const Istate = {
     loading:false,
     error:false,
-    data:[],
+    data:[{
+        id:1,
+        title:"A",
+        note:"B"
+    },
+{
+    id:2,
+    title:"D",
+    note:"C"
+}],
     simgleData:[]
 }
 

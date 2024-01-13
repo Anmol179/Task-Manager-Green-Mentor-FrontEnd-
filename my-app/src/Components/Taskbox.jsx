@@ -22,8 +22,8 @@ export default function Taskbox(ele) {
 
   return (
     <div>
-        <h1>{ele.name}Green mentor assisnment</h1>
-        <p>{ele.note}Todo application</p>
+        <h1>{ele.title}</h1>
+        <p>{ele.note}</p>
         <h4 onClick={(()=>{changeStatus(ele.status)})}>Status:-{
             ele.status ? "Completed" : "Not Completed"     
         }</h4>

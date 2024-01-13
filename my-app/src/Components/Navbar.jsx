@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(login) {
 
   const navigate = useNavigate();
 
-    const [login,setLogin] = useState(false);
+    // const [login,setLogin] = useState(false);
 
     const loginfnc = () =>{
-        if(login){
-          setLogin(false);
-        }
-        else{
-          setLogin(true);
-        }
+        // if(login){
+        //   setLogin(false);
+        // }
+        // else{
+        //   setLogin(true);
+        // }
     }
   return (
     <div>
