@@ -4,7 +4,12 @@ export default function Navbar() {
     const [login,setLogin] = useState(false);
 
     const loginfnc = () =>{
-        //
+        if(login){
+          setLogin(false);
+        }
+        else{
+          setLogin(true);
+        }
     }
   return (
     <div>
@@ -16,7 +21,7 @@ export default function Navbar() {
             <div>Add Task</div>
         </div>
          <div>
-            <button>{
+            <button onClick={loginfnc}>{
             login?"Logout":"Login"    
             }</button>
          </div>
